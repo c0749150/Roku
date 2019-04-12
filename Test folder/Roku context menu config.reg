@@ -1,0 +1,118 @@
+Windows Registry Editor Version 5.00
+
+;Creating a Roku shell for any type of file
+[HKEY_CLASSES_ROOT\*\shell\Roku]
+"Icon"="C:\\Images\\roku.ico"
+"MUIVerb"="Roku"
+"subcommands"=""
+
+;Copy file command for any file
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd1]
+"MUIVerb" = "Copy"
+
+;Action for copy file command
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd1\command]
+@ = "cmd /c \"\"C:\\Test folder\\copy.bat\" \"%1\"\""
+
+;Cut/Move file command for any file
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd2]
+"MUIVerb" = "Cut"
+
+;Action for cut/move file command
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd2\command]
+@ = "cmd /c \"\"C:\\Test folder\\cut.bat\" \"%1\"\""
+
+;Mark file command for any file
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd3]
+"MUIVerb" = "Mark"
+
+;Action for mark file command - Not required
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd3\command]
+@ = "cmd /c \"java \"C:\\Test folder\\RokuLog\" 0 \"%1\"\""
+
+;Rename file command for any file
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd4]
+"MUIVerb" = "Rename"
+
+;Action for rename file command
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd4\command]
+@ = "cmd /c \"\"C:\\Test folder\\rename.bat\" \"%1\"\""
+
+;Delete file command for any file
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd5]
+"MUIVerb" = "Delete"
+
+;Action for delete file command
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd5\command]
+@ = "cmd /c \"\"C:\\Test folder\\del.bat\" \"%1\"\""
+
+;Generate Tree for file command for any file
+[HKEY_CLASSES_ROOT\*\shell\Roku\Shell\cmd6]
+"MUIVerb" = "Generate Tree"
+
+
+;Creating a Roku shell for all directories
+[HKEY_CLASSES_ROOT\Directory\shell\Roku]
+"Icon"="C:\\Images\\roku.ico"
+"MUIVerb"="Roku"
+"subcommands"=""
+
+;Copy file command for all directories
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd1]
+"MUIVerb" = "copy"
+
+;Action for copy directory command
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd1\command]
+@ = "cmd /c \"\"C:\\Test folder\\copyDir.bat\" \"%V\"\""
+
+;Cut/Move file command for all directories
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd2]
+"MUIVerb" = "cut"
+
+;Action for cut/move directory command
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd2\command]
+@ = "cmd /c \"\"C:\\Test folder\\cutDir.bat\" \"%V\"\""
+
+;Mark folder command for any folder
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd3]
+"MUIVerb" = "Mark"
+
+;Action for mark folder command - Not required
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd3\command]
+@ = "cmd /c \"java \"C:\\Test folder\\RokuLog\" 0 \"%1\"\""
+
+;Rename folder command for any file
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd4]
+"MUIVerb" = "Rename"
+
+;Action for rename folder command
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd4\command]
+@ = "cmd /c \"\"C:\\Test folder\\rename.bat\" \"%1\"\""
+
+;Delete folder command for any file
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd5]
+"MUIVerb" = "Delete"
+
+;Action for delete folder command
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd5\command]
+@ = "cmd /c \"\"C:\\Test folder\\delDir.bat\" \"%1\"\""
+
+;Generate Tree for folders command for any file
+[HKEY_CLASSES_ROOT\Directory\shell\Roku\Shell\cmd6]
+"MUIVerb" = "Generate Tree"
+
+
+
+;Creating a Roku shell for a directory background
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Roku]
+"Icon"="C:\\Images\\roku.ico"
+"MUIVerb"="Roku"
+"subcommands"=""
+
+;Paste file command in a directory background
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Roku\Shell\cmd1]
+"MUIVerb" = "paste"
+
+;Action for paste command
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Roku\Shell\cmd1\command]
+@ = "cmd /c \"\"C:\\Test folder\\paste.bat\" \"%V\"\""
